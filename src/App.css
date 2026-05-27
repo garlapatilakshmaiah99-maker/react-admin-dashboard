@@ -1,0 +1,687 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111827;
+}
+
+/* =============================== */
+/* Navbar */
+/* =============================== */
+
+.navbar{
+    background-color: olive;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.logo{
+    color: white;
+    margin: 0;
+    font-size: 28px;
+}
+
+.navbar button{
+    padding: 10px 22px;
+    background-color: #ee2222;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar button:hover{
+    background-color: #06b6d4;
+}
+
+/* Navbar Links */
+
+.nav-links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-links a:hover{
+    color: #22d3ee;
+}
+
+/* Home Navbar Hamburger */
+
+.hamburger{
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* =============================== */
+/* Auth Pages */
+/* =============================== */
+
+.auth-page{
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card{
+    width: 350px;
+    background-color: #1e293b;
+    padding: 35px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.auth-card h2{
+    color: #22d3ee;
+    text-align: center;
+    margin: 0;
+}
+
+.auth-card label{
+    color: white;
+    font-size: 15px;
+    margin-bottom: -10px;
+}
+
+.auth-card input{
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.auth-card button{
+    padding: 14px;
+    background-color: #22d3ee;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.auth-card button:hover{
+    background-color: #06b6d4;
+}
+
+.auth-card p{
+    color: white;
+    text-align: center;
+}
+
+.auth-card a{
+    color: #22d3ee;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Password Box */
+
+.password-box{
+    position: relative;
+}
+
+.password-box input{
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 45px;
+}
+
+.password-box span{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Hide Default Browser Password Icon */
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear{
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button{
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+}
+
+/* =============================== */
+/* Common Page */
+/* =============================== */
+
+.page{
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.page h1{
+    font-size: 50px;
+    color: #22d3ee;
+}
+
+.page p{
+    width: 70%;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+button{
+    padding: 12px 28px;
+    background-color: #22d3ee;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* =============================== */
+/* Dashboard Layout */
+/* =============================== */
+
+.dashboard-layout{
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+.dashboard-sidebar{
+    width: 230px;
+    background-color: #0f172a;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+/* Sidebar Hamburger */
+
+.sidebar-hamburger{
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Menu */
+
+.sidebar-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.dashboard-sidebar button{
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e293b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dashboard-sidebar button:hover,
+.active-menu{
+    background-color: #22d3ee !important;
+
+    color: black !important;
+
+    font-weight: bold;
+
+}
+
+
+.active-menu{
+    background-color: #22d3ee !important;
+
+    color: black !important;
+
+    font-weight: bold;
+}
+
+.dashboard-container{
+    flex: 1;
+    padding: 30px;
+    color: white;
+    overflow-x: hidden;
+}
+
+.dashboard-top{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.dashboard-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.empty-dashboard{
+    color: white;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.empty-dashboard h1{
+    color: #22d3ee;
+}
+
+/* =============================== */
+/* Table */
+/* =============================== */
+
+.user-table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+}
+
+.user-table th,
+.user-table td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.user-table th{
+    background-color: #0f172a;
+    color: white;
+}
+
+/* =============================== */
+/* Filter */
+/* =============================== */
+
+.filter-section{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.filter-section select,
+.filter-section input{
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+}
+
+.filter-section button{
+    padding: 12px 20px;
+    background-color: #22d3ee;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Add User Buttons */
+
+.add-user-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.add-user-buttons button{
+    flex: 1;
+}
+
+/* =============================== */
+/* Users API Section */
+/* =============================== */
+
+.users-section{
+    color: white;
+}
+
+.users-section h1{
+    color: #22d3ee;
+    margin-bottom: 20px;
+}
+
+.users-section input{
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 25px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.users-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.user-card{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.user-card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.user-card h2{
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.user-card p{
+    margin: 8px 0;
+    word-break: break-word;
+}
+
+/* =============================== */
+/* Products API Section */
+/* =============================== */
+
+.products-section{
+    color: white;
+}
+
+.products-section h1{
+    color: #22d3ee;
+    margin-bottom: 20px;
+}
+
+.products-section input{
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 25px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.product-card{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.product-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h2{
+    color: #0f172a;
+    font-size: 20px;
+}
+
+/* =============================== */
+/* Tablet Responsive */
+/* =============================== */
+
+@media screen and (max-width: 992px){
+
+    .dashboard-layout{
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+
+    .sidebar-menu{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-sidebar button{
+        min-width: 130px;
+        text-align: center;
+    }
+
+    .dashboard-container{
+        padding: 20px;
+        overflow-x: hidden;
+    }
+
+    .users-container,
+    .products-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page p{
+        width: 90%;
+    }
+
+    .user-table{
+        width: 100%;
+        table-layout: fixed;
+        font-size: 14px;
+    }
+
+    .user-table th,
+    .user-table td{
+        padding: 9px;
+        word-break: break-word;
+    }
+}
+
+/* =============================== */
+/* Mobile Responsive */
+/* =============================== */
+
+@media screen and (max-width: 768px){
+
+    /* Home Navbar Hamburger */
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: olive;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        padding: 20px 0;
+        gap: 20px;
+        z-index: 1000;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .navbar{
+        padding: 15px 20px;
+    }
+
+    .logo{
+        font-size: 22px;
+    }
+
+    .navbar button{
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    /* Dashboard Sidebar Hamburger */
+
+    .sidebar-hamburger{
+        display: block;
+    }
+
+    .dashboard-layout{
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    .sidebar-menu{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sidebar-menu.active{
+        display: flex;
+    }
+
+    .dashboard-sidebar button{
+        width: 100%;
+        text-align: center;
+    }
+
+    .dashboard-container{
+        padding: 15px;
+        overflow-x: hidden;
+    }
+
+    .dashboard-top{
+        justify-content: center;
+    }
+
+    .filter-section{
+        flex-direction: column;
+    }
+
+    .filter-section select,
+    .filter-section input,
+    .filter-section button{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .user-table{
+        width: 100%;
+        table-layout: fixed;
+        font-size: 12px;
+        display: table;
+        overflow-x: hidden;
+    }
+
+    .user-table th,
+    .user-table td{
+        padding: 8px 4px;
+        word-break: break-word;
+    }
+
+    .users-container,
+    .products-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .user-card,
+    .product-card{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .auth-card{
+        width: 100%;
+        padding: 25px;
+    }
+
+    .page h1{
+        font-size: 34px;
+    }
+
+    .page p{
+        width: 95%;
+        font-size: 16px;
+    }
+
+    .add-user-buttons{
+        flex-direction: column;
+    }
+}
+
+/* for error messages in  input */
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.error-msg{
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: -5px;
+}
+
+
+
