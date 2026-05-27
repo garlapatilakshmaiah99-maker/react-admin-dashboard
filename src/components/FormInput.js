@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function FormInput({                                                                                  //P-destructured
   label,
   type,
